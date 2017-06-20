@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- '4'
+- '5'
+- '6'
+- 'stable'
+
+before_deploy:
+  - npm --no-git-tag-version version 1.$TRAVIS_JOB_NUMBER
+
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: chris@cns.me.uk
+  api_key:
+    secure: Y+La3f8gBV6EJrgcJIQzqosbJjKErXu55F2Sni8MPbW+R2iwgx6mbFlyun7Z0nRmdiF2HbkSJ4A6FiDLpcKAmzqPs8LApoo2zJ8sEmYowmKVfqy3vv+os9Qhw/65ln1MyTrt43/9mYZAVXc+xJPu2OcJ0kgOvdFS9BN1fA4c+fZ5l2ouqeO8D8Ls5ZMyiz5Ld3FdlpVK8i480NnJ+gRPfGaeXvDCvBWqgqV4qFf4tGplJuyWWWnLVG2d2dP8Tmko7eWEkemwfrXW3ZmgTO88Si6/1VyxYzn5Pu/d269OaIbntTl0Ak4Wusj02GnSDtwlJCuuqA9ThZzHB12w+YLnxc9BlgkqA8Gek93+LhH1xiGNLd4quZHyHpdOFVnBNRD5AkrNrPTDCF3LCEEN4FCIumru39LuNwCn3PXz1t4rCL2A/wjuHTPoSSJi2ku/bDyOn3Xz2INn5DFUzGV6McNZVDipANmPjSlePOK8UEyO7fE3FNA/1k3GMxQip3rERMiTqHYnNcWPD5aI95BOlC1vvd4tx/J7lxqb2YNhPJIrXB7sYdxZ1I7sTOvYWBz1rCR3E4XdkyPiUF02FE/4DHq9as30ag297FO74irOkYJDekOi1Sm91rl3Wa2LHAmAUJLc6V79qZshbTByeUwwcTAvQTWArCb/NkokgqK7qfuY7IU=
+  on:
+    node: 'stable'
+    repo: chrisns/json-mqtt-serializer

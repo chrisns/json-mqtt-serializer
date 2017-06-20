@@ -1,0 +1,21 @@
+{
+  "name": "json-mqtt-serializer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ."
+  },
+  "author": "Chris Nesbitt-Smith",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
+  },
+  "dependencies": {
+    "lodash.flattendeep": "^4.4.0",
+    "lodash.isarray": "^4.0.0",
+    "lodash.isobject": "^3.0.2",
+    "lodash.map": "^4.6.0"
+  }
+}
