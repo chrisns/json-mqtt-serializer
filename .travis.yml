@@ -3,17 +3,15 @@ node_js:
 - '4'
 - '5'
 - '6'
-- 'stable'
-
+- stable
 before_deploy:
-  - npm --no-git-tag-version version 1.$TRAVIS_JOB_NUMBER
-
+- npm --no-git-tag-version version 1.$TRAVIS_JOB_NUMBER
 deploy:
   skip_cleanup: true
   provider: npm
   email: chris@cns.me.uk
   api_key:
-    secure: Y+La3f8gBV6EJrgcJIQzqosbJjKErXu55F2Sni8MPbW+R2iwgx6mbFlyun7Z0nRmdiF2HbkSJ4A6FiDLpcKAmzqPs8LApoo2zJ8sEmYowmKVfqy3vv+os9Qhw/65ln1MyTrt43/9mYZAVXc+xJPu2OcJ0kgOvdFS9BN1fA4c+fZ5l2ouqeO8D8Ls5ZMyiz5Ld3FdlpVK8i480NnJ+gRPfGaeXvDCvBWqgqV4qFf4tGplJuyWWWnLVG2d2dP8Tmko7eWEkemwfrXW3ZmgTO88Si6/1VyxYzn5Pu/d269OaIbntTl0Ak4Wusj02GnSDtwlJCuuqA9ThZzHB12w+YLnxc9BlgkqA8Gek93+LhH1xiGNLd4quZHyHpdOFVnBNRD5AkrNrPTDCF3LCEEN4FCIumru39LuNwCn3PXz1t4rCL2A/wjuHTPoSSJi2ku/bDyOn3Xz2INn5DFUzGV6McNZVDipANmPjSlePOK8UEyO7fE3FNA/1k3GMxQip3rERMiTqHYnNcWPD5aI95BOlC1vvd4tx/J7lxqb2YNhPJIrXB7sYdxZ1I7sTOvYWBz1rCR3E4XdkyPiUF02FE/4DHq9as30ag297FO74irOkYJDekOi1Sm91rl3Wa2LHAmAUJLc6V79qZshbTByeUwwcTAvQTWArCb/NkokgqK7qfuY7IU=
+    secure: ZwP7Ji7rB71FKJvGrCFRmpJ9aFeuoq0+Y9Uu2vRQr9e5FvJ9EFHPZO+M1yBecFjmp/ZS6GA0PJx98IW5CB95wq1PZ9IwT8zdcD8wSYHodPWkNfD+tkdwnZH3y4j9f5y+C6/+EBY2g7bI3sXgIq30gGHNtZluPxC4V3PFUr6i5KA1gtQ86xrQG24s6AGBKi9J5xZj0p/I9BNDlwY3muIhUgGWuXKnAfKbRnFOtEz0qUPiLcTZ7099QvbE1rwsT8rodHUxgcqDfc13SkO8Ddpvdp9Md1uHVALb76x6osHudCvcZ4Fqp1OPm9jan4fTFopEdMrI2X0rGuZxuB8sdmGuVMaX7+OW1yAkh2ArvxiB+/Szpe7IolO+9xkmcCowxVwPOSrYsfk7+V+oF2Tg8fsQYnzsLB7X8596tlgha+h77BJXfU3rb0jFs0JD1EDOKooiG+jjmyoC+HyGu1XllXFOw40gOMGgDUrmvKW+903qilSaIw3/cOhThg/yAP/xwIpjauFHY4dRa9baz+7H4imn9wSeJtvuRn5GAqG1KQIjayICcAfFVsgetl2zozdyKkzNuzg5ownmpTdy4xTwFk/J5oU0A9wJJm2OxfTs2o3LPOt7IFBMF0ZtnR159Q2nGtOHKADs+N0czMSL6XHFhldn+ZUh8Q/M+c0EFCQF7aBgi6c=
   on:
-    node: 'stable'
+    node: stable
     repo: chrisns/json-mqtt-serializer
