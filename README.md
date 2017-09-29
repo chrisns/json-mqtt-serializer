@@ -1,5 +1,7 @@
 # Small helper to serialize json to MQTT topics
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/chrisns/json-mqtt-serializer.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/chrisns/json-mqtt-serializer.svg?branch=master)](https://travis-ci.org/chrisns/json-mqtt-serializer)
 
 [see the tests for detail of the formatting options](index.test.js)
